@@ -54,6 +54,15 @@ public class ReservaActivity extends AppCompatActivity {
         });
     }
 
+    private void mostrarAlerta(String titulo, String mensaje) {
+        new AlertDialog.Builder(this)
+                .setTitle(titulo)
+                .setMessage(mensaje)
+                .setPositiveButton("Aceptar", (dialog, which) -> finish())
+                .setCancelable(false)
+                .show();
+    }
+
 
 }
 
